@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "433618395775",
+    "project_id": "carspot-c1bb4",
+    "storage_bucket": "carspot-c1bb4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433618395775:android:004077e2e02b4f57e2554a",
+        "android_client_info": {
+          "package_name": "com.example.car_spot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Nqq3sCIP0VUPYqCWTGLKX2Ys0h6BX6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

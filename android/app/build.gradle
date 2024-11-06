@@ -1,0 +1,57 @@
+// build.gradle (niveau module app)
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // Le plugin Flutter doit être appliqué après les plugins Android et Kotlin
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.car_spot"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.car_spot"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+// Ajoute le plugin Google Services pour Firebase
+apply plugin: 'com.google.gms.google-services'  // Applique le plugin Google Services
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Firebase BoM pour la gestion des versions compatibles
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+
+    // Ajoute Firebase Auth
+    implementation 'com.google.firebase:firebase-auth'
+
+    // Ajoute Firestore
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Ajoute d'autres SDK Firebase si nécessaire
+}
